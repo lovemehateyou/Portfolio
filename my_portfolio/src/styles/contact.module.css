@@ -1,0 +1,120 @@
+.contact_us_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: transparent;
+  }
+  
+.contact_us_container  h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--textTheme);
+  }
+  
+.contact_us_container  p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--textTheme);
+  }
+  .contact_img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .contact_img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .contact_content {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+    width: 100%;
+  }
+  
+  .contact_form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ 
+    background: transparent;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  .form_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--textTheme);
+  }
+
+  input{
+    background-color:white;
+    color: black;
+  }
+  
+  input,
+  textarea {
+    padding: 18px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    font-family: "Aldrich", serif;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: rgb(230, 8, 230);
+    
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .submit_button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: var(--textTheme);
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit_button:hover {
+    background-color:  rgb(230, 8, 230);
+  }
+  .contact_vid{
+    flex: 1; 
+    max-width: 50%;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .contact_content {
+      flex-direction: column;
+    }
+  
+    .contact_form {
+      padding: 20px;
+    }
+  }

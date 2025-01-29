@@ -1,0 +1,121 @@
+.section1{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 10px;
+    text-align: center;
+    height: 200vh;
+
+  }
+  
+  .showcase_grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .showcase_item{
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    animation:scale-up-center 1s ease-in-out backwards ;
+  }
+  
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  .showcase_img{
+    height: 400px;
+    width: 100%;
+   
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .showcase_img img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .showcase_item_title{
+    font-size: 38px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--textTheme); 
+  }
+ 
+
+    
+  .showcase_item_desc{
+    color: var(--textTheme);
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .showcase_item_desc:hover{
+    color: var(--textTheme);
+  }
+  .showcase_item p {
+    margin-bottom: 20px;
+  }
+
+  .showcase_item_button{
+    font-size: 1.5rem;
+    padding: 0.5rem 4rem;
+    background-color: rgba(3, 3, 129, 0.58);
+    margin-bottom: 1rem;
+   
+    color: var(--textTheme);
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .likes{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    width: 50%;
+    gap: 1rem;
+    margin-top: 10px;
+  }
+
+  .likes button{
+    padding:0.5rem 1rem;
+    background-color: transparent;
+    color: var(--textTheme);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .likes button:hover{
+    background-color: rgba(3, 3, 129, 0.58);
+  }
+
+  .likes p{
+    
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--textTheme);
+    margin: 0;
+  }
+
+  span{
+    color: var(--textTheme);
+  }
+

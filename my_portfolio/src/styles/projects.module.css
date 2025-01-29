@@ -1,0 +1,205 @@
+body{
+    overflow-x: hidden;
+}
+
+.overall {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .header {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--textTheme);
+    
+  }
+  
+  .header h1 {
+    font-size: 4rem;
+    line-height: 5.9rem;
+  }
+  
+  .header p {
+    font-size: 2rem;
+  }
+  
+  .projects {
+    background-color: transparent;
+    height: 200vh; 
+  }
+  
+.wrapper {
+    overflow: hidden;
+    height: 100vh;
+    top: 0;
+    position: sticky;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+  }
+  
+  .containerall {
+    display: flex; 
+    width: max-content; 
+    gap: 3vw;
+  }
+  
+  .section {
+    width: 100vw; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--textTheme);
+    background-color: rgba(86, 3, 86, 0.203); 
+  }
+
+  .proj{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .img{
+    flex: 1; 
+    max-width: 50%;
+    width: 400px;
+    height: 400px;
+  }
+
+  .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
+
+  .disc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 50%;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .disc h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .disc p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .disc a {
+    font-size: 1.5rem;
+    padding: 0.5rem 4rem;
+    background-color: rgba(3, 3, 129, 0.58);
+    margin-bottom: 1rem;
+    color: var(--textTheme);
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .disc a:hover{
+    background-color: rgba(3, 3, 129, 0.8);
+  }
+  
+  .likes{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    width: 50%;
+    gap: 1rem;
+  }
+
+  .likes button{
+    padding:0.5rem 1rem;
+    background-color: transparent;
+    color: var(--textTheme);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .likes button:hover{
+    background-color: rgba(3, 3, 129, 0.58);
+  }
+
+  .likes p{
+    
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--textTheme);
+    margin: 0;
+  }
+
+  span{
+    color: var(--textTheme);
+  }
+  
+  .header2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+  }
+
+  .git{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: var(--textTheme);
+    padding: 3rem;
+  }
+
+    @media screen and (max-width: 768px){
+
+    .proj{
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      height: fit-content;
+      padding: 2rem;
+     
+    }
+    
+    .disc{
+      max-width: 100%;
+      padding: 2rem;
+      justify-content: flex-start;
+    }
+    .disc h1{
+      font-size: 2rem;
+    }
+    .disc p{
+      font-size: 1rem;
+    }
+    
+    .likes{
+      width: 100%;
+    }
+    .img{
+      max-width: 100%;
+      margin-top: 250px;
+    }
+    .header2{
+      margin-top: 850px;
+
+    }
+    
+   
+  } 

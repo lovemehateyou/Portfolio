@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+/* background: rgb(5,2,33); */
+background:var(--theme);
+font-family: "Aldrich", serif;
+font-weight: 400;
+font-style: normal;
+
+}
+
+.slick-slide >div{
+  margin: 0 10px;
+}
+
+:root {
+  --brownish-color: #a0522d;
+  --theme: linear-gradient(90deg, rgba(5,2,33,1) 100%, rgba(106,5,128,0.7401085434173669) 100%);
+  --textTheme: #fff;
+  --emphasizedText: #d9534f;
+  --bookPageOpacity: 1;
+}

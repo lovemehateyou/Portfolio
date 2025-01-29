@@ -1,0 +1,33 @@
+/* Add this to your CSS or module CSS file */
+.githubPosts {
+    margin-top: 1rem;
+    padding: 2rem;
+  }
+  .githubPosts h2{
+    text-align: center;
+    color: var(--textTheme);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .githubPost {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(86, 3, 86, 0.203); ;
+    border-radius: 15px;
+  }
+  .githubPost p{
+    color: var(--textTheme);
+    margin: 1rem;
+  }
+  
+  .githubPost a {
+   
+    color: #0366d6;
+    text-decoration: none;
+  }
+  
+  .githubPost a:hover {
+    text-decoration: underline;
+  }
+  

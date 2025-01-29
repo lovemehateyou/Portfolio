@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../React Website"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "project-portfolio"
+	}
+}
