@@ -368,7 +368,7 @@
     }
     .card2 .content{
         position:absolute;
-        width: 50%;
+        width: 100%;
         left: 20%;
         padding: 20px 20px 20px 40px;
         opacity: 0;
@@ -380,7 +380,7 @@
       background-color: white;
       color: #a506c6;
       padding: 1rem;
-      margin-top: 10px;
+      margin-top: 20px;
     }
     .card2:hover .content{
         transition-delay: 0.75s;
@@ -393,9 +393,11 @@
         text-transform: uppercase;
         font-size: 2.4em;
         line-height: 1em;
+        margin-bottom: 20px;
     }
     .card .content p{
         color: var(--textTheme);
+        margin-bottom: 20px;
     }
     .card .content a{
         position: relative;
@@ -407,6 +409,7 @@
         text-decoration: none;
         font-weight: 600;
         margin: 10px;
+        margin-top: 20px;
     }
 
     /* Happy clients */
@@ -548,6 +551,15 @@
         .testimonials{
           flex-direction: column;
         } 
+        .content{
+          width: 100%;
+          left: 10%;
+          padding: 0;
+        }
+        .content h1{
+          font-size: 1rem;
+          width: 100%;
+        }
     }
 
     @media(max-width: 600px){
