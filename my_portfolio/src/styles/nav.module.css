@@ -6,7 +6,7 @@
     padding: 20px;
   }
   .themeSwitch{
-    margin: 20px;
+    margin: 10px;
   }
 
   .logo{
@@ -20,8 +20,7 @@
  
 .Navbar {
     flex: 2;
-    
-  }
+}
 
 .Navbar a {
     text-decoration: none;

@@ -8,16 +8,6 @@ import { Link } from 'react-router-dom'
 
 function About(){
 
-useEffect(() => {
-    const sr = ScrollReveal({
-    origin: "left",
-    distance: "50px",
-    duration: 2000,
-    reset: false,
-    });
-      
-    sr.reveal(`.${styles.skillcontain}`, { interval: 200 });
-}, []);
 
 
     const [html, setHtml] = useState(0);

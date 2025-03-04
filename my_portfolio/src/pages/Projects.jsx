@@ -89,7 +89,7 @@ const Projects = () => {
       setUrl("https://habeshamarket.onrender.com")
     }
     else if(id===2){
-      setUrl("https://alaxandria.netlify.app/")
+      setUrl("https://alexandriadesign.netlify.app/")
     }
   }
 

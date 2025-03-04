@@ -214,10 +214,9 @@ function Home() {
         </div>
         <div className={styles.content}>
             <h2>Want to work Together!</h2>
-            <p>Transform your product showcase into an engaging and interactive experience with our sleek animated card design. Let's collaborate to bring your ideas to life and captivate your audience! </p>
+            <p>Transform your product showcase into an engaging and interactive experience with sleek animated card design like this. Let's collaborate to bring your ideas to life </p>
             <a href=""><Link to= '/contact'>Explore More</Link></a>
         </div>
-        <img src="" alt="" className={styles.sign_img}/>
     </div>
     </section>
 
@@ -225,6 +224,7 @@ function Home() {
     <section className={styles.clients_container}>
       <h2 className={styles.clients_title}>Happy Clients</h2>
       <p className={styles.clients_subtitle}>Read what our clients have to say about us</p>
+      
       <div className={styles.testimonials}>
         {isMobile ? (
           // Mobile View: Simple testimonials layout
