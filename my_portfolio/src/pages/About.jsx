@@ -1,7 +1,7 @@
 import {React,useState,useEffect} from 'react';
 import styles from '../styles/about.module.css';
 import logo from '../assets/CodeSets-removebg-preview.png';
-import me from '../assets/p-photo.jpg';
+import me from '../assets/pic-me.jpg';
 import ScrollReveal from "scrollreveal";
 import { Link } from 'react-router-dom'
 
@@ -61,9 +61,9 @@ function About(){
                 </div>
                 
                   <div className={styles.img_dis}>
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <clipPath id = 'clip-path'>
-                    <path fill="#8A3FFC" d="M49,-71C62.5,-67.6,71.7,-52.3,72.9,-37C74.1,-21.7,67.2,-6.5,59.8,4.8C52.3,16.2,44.1,23.7,38.3,36.9C32.6,50.2,29.2,69.2,19.2,77.9C9.1,86.6,-7.7,84.9,-17.9,75.3C-28.1,65.7,-31.7,48.2,-41.7,36.3C-51.6,24.5,-67.8,18.3,-68.2,10.3C-68.5,2.4,-52.9,-7.3,-46.2,-20.7C-39.5,-34.1,-41.7,-51.2,-35.5,-57.9C-29.2,-64.6,-14.6,-61,1.6,-63.5C17.8,-65.9,35.5,-74.4,49,-71Z" transform="translate(100 100)" />
+                    <path fill="#FF0066" d="M46.3,-76.6C56.8,-65.3,60,-47.1,67.1,-30.9C74.2,-14.6,85.1,-0.4,82.3,11.1C79.5,22.6,63,31.5,51.5,44.5C40,57.6,33.5,74.8,23.3,76.7C13,78.5,-1,64.9,-16.6,59.1C-32.1,53.3,-49.1,55.3,-57.8,48.3C-66.5,41.4,-66.9,25.5,-63.6,12.4C-60.3,-0.6,-53.4,-10.9,-50.1,-24.8C-46.7,-38.6,-47,-56,-39.2,-68.6C-31.5,-81.2,-15.7,-89,1.1,-90.7C17.9,-92.4,35.8,-87.9,46.3,-76.6Z" transform="translate(100 100)" />
                     </clipPath>
                     <image href={me} alt="my profile pic" width='100%' height='100%'  clipPath = "url(#clip-path)" />
                 </svg>
@@ -263,21 +263,6 @@ function About(){
         
               </div>
             </section>
-
-       <section className={styles.overall}>
-          <div className={styles.card2}>
-              <div className={styles.circle} style={{ "--clr": "#a506c6" }}>
-                  {<img src={logo} alt="" className={styles.sign}/>}
-              </div>
-              <div className={styles.content}>
-                  <h2>Want to work Together!</h2>
-                  <p>Transform your product showcase into an engaging and interactive experience with our sleek animated card design. Let's collaborate to bring your ideas to life and captivate your audience! </p>
-                   <a href=""><Link to= '/contact'>Explore More</Link></a>
-              </div>
-              <img src="" alt="" className={styles.sign_img}/>
-          </div>
-          </section>
-
 
 </>
     )

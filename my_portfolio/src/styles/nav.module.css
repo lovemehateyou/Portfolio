@@ -6,7 +6,9 @@
     padding: 20px;
   }
   .themeSwitch{
-    margin: 10px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
   }
 
   .logo{

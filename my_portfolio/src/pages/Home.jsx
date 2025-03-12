@@ -11,6 +11,7 @@ import logo from '../assets/web design.jpg'
 import logo2 from '../assets/system design.jpg'
 import logo3 from '../assets/Responsive design.jpg'
 import logo4 from '../assets/graphic design.jpg'
+import me from '../assets/p-photo.jpg';
 
 import logoweb from '../assets/CodeSets-removebg-preview.png';
 
@@ -128,9 +129,14 @@ function Home() {
             
         </div>
         
-          <div className={styles.img_dis}>
-          <iframe src='https://my.spline.design/chips-7bb7036b71967381d0f757aca8463bc2/' frameborder='0' width='100%' height='100%'></iframe>
-        </div> 
+      <div className={styles.img_dis}>
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <clipPath id = 'clip-path'>
+              <path fill="#8A3FFC" d="M49,-71C62.5,-67.6,71.7,-52.3,72.9,-37C74.1,-21.7,67.2,-6.5,59.8,4.8C52.3,16.2,44.1,23.7,38.3,36.9C32.6,50.2,29.2,69.2,19.2,77.9C9.1,86.6,-7.7,84.9,-17.9,75.3C-28.1,65.7,-31.7,48.2,-41.7,36.3C-51.6,24.5,-67.8,18.3,-68.2,10.3C-68.5,2.4,-52.9,-7.3,-46.2,-20.7C-39.5,-34.1,-41.7,-51.2,-35.5,-57.9C-29.2,-64.6,-14.6,-61,1.6,-63.5C17.8,-65.9,35.5,-74.4,49,-71Z" transform="translate(100 100)" />
+              </clipPath>
+              <image href={me} alt="my profile pic" width='100%' height='100%'  clipPath = "url(#clip-path)" />
+          </svg>
+      </div> 
     </section>
 
     <div className={styles.showcase_header}>
