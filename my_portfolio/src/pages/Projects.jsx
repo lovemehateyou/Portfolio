@@ -3,7 +3,7 @@ import styles from '../styles/projects.module.css';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import habeshaImage from "../assets/habesha.png";
 import alexandria from "../assets/alexandria .png";
-import chatting from '../assets/chatting.jpg';
+import destiny from '../assets/destiny pic.png';
 import GitHub from '../components/Github';
 import Productgrid from '../components/productgrid'
 
@@ -65,10 +65,10 @@ const Projects = () => {
     },
     {
       id: 3,
-      image: chatting,
-      title: "Enawgaw",
-      description: "A chatting site that allows users to chat with each other. It has a user-friendly interface and a secure line of communication and customer service.",
-      status: "in progress",
+      image: destiny,
+      title: "Destiny Future Acadamy",
+      description: "A website for a school that provides information about the school, its programs, and how to enroll as well as how to Donet to the schools.",
+      status: "Completed",
     }
 
     
@@ -90,6 +90,9 @@ const Projects = () => {
     }
     else if(id===2){
       setUrl("https://alexandriadesign.netlify.app/")
+    }
+    else if(id == 3){
+      setUrl("https://destinyfa.com/")
     }
   }
 

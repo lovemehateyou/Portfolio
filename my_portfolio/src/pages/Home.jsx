@@ -69,7 +69,7 @@ function Home() {
     {
         id: "c4",
         icon: "4",
-        title: "Graphic Design",
+        title: "UI and UX Design",
         description: "Creating visually stunning and engaging designs.",
         background: logo4,
       },

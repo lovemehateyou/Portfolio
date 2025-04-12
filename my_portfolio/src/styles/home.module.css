@@ -351,8 +351,9 @@
         transition-delay: 0s;
     }
     .card2 .content{
-        position:absolute;
+        position:relative;
         width: 70%;
+        height: auto;
         left: 20%; 
         padding: 0px 10px;
         opacity: 0;
@@ -363,7 +364,7 @@
       text-decoration: none;
       background-color: white;
       color: #a506c6;
-      padding: 1rem;
+      padding: 0.5rem;
       margin-top: 20px;
     }
     .card2:hover .content{
@@ -375,7 +376,7 @@
     .card2 .content h2{
         color: var(--textTheme);
         text-transform: uppercase;
-        font-size: 2.4em;
+        font-size: 2.1em;
         line-height: 1em;
         margin-bottom: 10px;
     }
