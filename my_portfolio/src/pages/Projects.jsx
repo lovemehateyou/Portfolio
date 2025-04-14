@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styles from '../styles/projects.module.css';
+import Scrollbar from 'smooth-scrollbar';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import habeshaImage from "../assets/habesha.png";
 import alexandria from "../assets/alexandria .png";
@@ -12,31 +13,32 @@ import Productgrid from '../components/productgrid'
 
 
 const Projects = () => {
-
+  const scrollContainerRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
-  
-    useEffect(() => {
-      const handleResize = () => {
-        setIsMobile(window.innerWidth < 768); 
-      };
-  
-      handleResize(); 
-      // Check on initial render
-      window.addEventListener('resize', handleResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
-
   const [likes, setLikes] = useState(() => {
-    const savedLikes = localStorage.getItem('likes');
+  const savedLikes = localStorage.getItem('likes');
     return savedLikes ? JSON.parse(savedLikes) : { 1: 0, 2: 0, 3: 0 };
   });
+
+  const [url , setUrl] = useState("");
 
   useEffect(() => {
     localStorage.setItem('likes', JSON.stringify(likes));
   }, [likes]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); 
+    };
+
+    handleResize(); 
+    // Check on initial render
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleLike = (id) => {
     setLikes((prevLikes) => ({
@@ -46,7 +48,7 @@ const Projects = () => {
   };
 
 
-  const [url , setUrl] = useState("");
+ 
 
   const proj = [
     {
@@ -96,6 +98,15 @@ const Projects = () => {
     }
   }
 
+  useEffect(() => {
+    if (!isMobile && scrollContainerRef.current) {
+      Scrollbar.init(scrollContainerRef.current, {
+        damping: 0.07, // Momentum strength
+        renderByPixels: true,
+      });
+    }
+  }, [isMobile]);
+
   return (
     <div className={styles.overall}>
       
@@ -110,7 +121,9 @@ const Projects = () => {
         <Productgrid />
       ):(
 
-        <div className={styles.wrapper} >
+        
+
+        <div className={styles.wrapper}>
 
        
 
@@ -118,7 +131,7 @@ const Projects = () => {
 
             {proj.map((project, index) => (
 
-              <section className={`${styles.section}`} key={index}>
+              <section className={`${styles.section}`} key={index} ref={scrollContainerRef}>
 
                 <div className={styles.proj}>
 

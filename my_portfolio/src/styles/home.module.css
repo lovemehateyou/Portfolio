@@ -15,6 +15,7 @@
       animation: scale-up-center 1s ease-in-out forwards;
     }
     .img_dis img{
+      margin-top:50px ;
       width: 100%;
       height: 100%;
     }
@@ -415,6 +416,7 @@
       border: 2px solid purple;
       padding: 1.5rem;
       flex: 1;
+      height: auto;
       text-align: left;
     }
     
@@ -436,10 +438,15 @@
       color:var(--textTheme);
     }
     
-    .client_avatar img {
-      border-radius: 50%;
+    .client_avatar{
       width: 50px;
-      height: 50px;
+      height: auto;
+    }
+
+    .client_avatar img{
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
     }
     
     .client_details {

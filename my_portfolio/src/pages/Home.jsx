@@ -1,28 +1,31 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react';
 import styles from '../styles/home.module.css'
 import { Link } from 'react-router-dom'
 
 
-import client1 from '../assets/portrait-4568762_1920.jpg'
-import client2 from '../assets/woman-8643445_1920.png'
-import client3 from '../assets/ai-generated-8051238_1920.jpg'
+import client1 from '../assets/helena pic.jpg'
+import client2 from '../assets/heran pic.jpg'
+import client3 from '../assets/saron.jpg'
+import client4 from '../assets/mass.jpg'
 
 import logo from '../assets/web design.jpg'
 import logo2 from '../assets/system design.jpg'
 import logo3 from '../assets/Responsive design.jpg'
 import logo4 from '../assets/graphic design.jpg'
-import me from '../assets/p-photo.jpg';
+import me from '../assets/pic-me.jpg';
 
 import logoweb from '../assets/CodeSets-removebg-preview.png';
 
 
 import { useNavigate } from 'react-router-dom';
-import { useState,useEffect } from 'react'
+import Scrollbar from 'smooth-scrollbar';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
+
+  const scrollContainerRef = useRef(null);
 
   const navigate = useNavigate()
 
@@ -42,20 +45,31 @@ function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!isMobile && scrollContainerRef.current) {
+      Scrollbar.init(scrollContainerRef.current, {
+        damping: 0.07, // Momentum strength
+        renderByPixels: true,
+        continuousScrolling: true,
+        alwaysShowTracks: true,
+      });
+    }
+  }, [isMobile]);
+
   
 
   const cards = [
     {
       id: "c1",
       icon: "1",
-      title: "Web Development",
+      title: " Developer",
       description: "Building responsive and user-friendly websites.",
       background: logo,
     },
     {
       id: "c2",
       icon: "2",
-      title: "System Design",
+      title: "",
       description: "designing and developing scalable and reliable systems.",
       background: logo2,
     },
@@ -79,25 +93,33 @@ function Home() {
   const testimonials = [
     {
       stars: 5,
-      feedback: "Our experience with Alexandra was exceptional. They delivered beyond our expectations.",
-      name: "John Doe",
-      position: "CEO, ABC Company",
+      feedback: "Their eye for design and attention to performance truly set their work apart.",
+      name: "Helena",
+      position: "UI and UX designer",
       image:client1
     },
     {
       stars: 5,
-      feedback: "Working with Alexandra was a game-changer for our business. Their designs are top-notch.",
-      name: "Jane Smith",
-      position: "Marketing Manager, XYZ Inc.",
+      feedback: "A reliable developer who consistently delivers efficient, scalable solutions.",
+      name: "Heran",
+      position: "web developer",
       image:client2
     },
     {
       stars: 5,
-      feedback: "Alexandra's team is highly skilled and professional. They delivered our project on time and within budget.",
-      name: "David Johnson",
-      position: "CTO, 123 Corporation",
+      feedback: "Always up-to-date with the latest tech and ready to collaborate with enthusiasm.",
+      name: "Saron",
+      position: "Front-end developer",
       image:client3
     },
+
+    {
+      stars: 5,
+      feedback: "Working with him was seamless — clean code, strong logic, and great communication throughout.",
+      name: "Maassas",
+      position: "Backend developer",
+      image:client4
+    }
   ];
 
 
@@ -112,7 +134,7 @@ function Home() {
   
 
   return (
-    <>
+    <div ref={scrollContainerRef}>
       <section className={styles.hero}>
       <div className={styles.hero_dis}>
 
@@ -130,9 +152,9 @@ function Home() {
         </div>
         
       <div className={styles.img_dis}>
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 20 200 200" xmlns="http://www.w3.org/2000/svg">
               <clipPath id = 'clip-path'>
-              <path fill="#8A3FFC" d="M49,-71C62.5,-67.6,71.7,-52.3,72.9,-37C74.1,-21.7,67.2,-6.5,59.8,4.8C52.3,16.2,44.1,23.7,38.3,36.9C32.6,50.2,29.2,69.2,19.2,77.9C9.1,86.6,-7.7,84.9,-17.9,75.3C-28.1,65.7,-31.7,48.2,-41.7,36.3C-51.6,24.5,-67.8,18.3,-68.2,10.3C-68.5,2.4,-52.9,-7.3,-46.2,-20.7C-39.5,-34.1,-41.7,-51.2,-35.5,-57.9C-29.2,-64.6,-14.6,-61,1.6,-63.5C17.8,-65.9,35.5,-74.4,49,-71Z" transform="translate(100 100)" />
+              <path fill="#FF0066" d="M44.3,-59.6C55.4,-52.9,61,-37.3,67.9,-20.9C74.8,-4.6,82.9,12.5,80.5,28.1C78,43.6,65.1,57.7,49.9,67.5C34.7,77.2,17.4,82.8,-0.1,82.9C-17.6,83.1,-35.2,77.8,-46.3,66.7C-57.4,55.6,-62.1,38.7,-62.9,23.5C-63.8,8.2,-60.7,-5.2,-58.8,-21.6C-56.9,-38,-56.3,-57.2,-46.7,-64.5C-37,-71.8,-18.5,-67,-1,-65.7C16.6,-64.4,33.2,-66.4,44.3,-59.6Z" transform="translate(100 100)" />
               </clipPath>
               <image href={me} alt="my profile pic" width='100%' height='100%'  clipPath = "url(#clip-path)" />
           </svg>
@@ -263,9 +285,11 @@ function Home() {
                 </div>
                 <p className={styles.feedback}>{testimonial.feedback}</p>
                 <div className={styles.client_info}>
+
                   <div className={styles.client_avatar}>
                     <img src={testimonial.image} alt={`${testimonial.name}`} />
                   </div>
+                  
                   <div className={styles.client_details}>
                     <p className={styles.client_name}>{testimonial.name}</p>
                     <p className={styles.client_position}>{testimonial.position}</p>
@@ -278,7 +302,7 @@ function Home() {
       </div>
     </section>
 
-    </>
+    </div>
     
   )
 

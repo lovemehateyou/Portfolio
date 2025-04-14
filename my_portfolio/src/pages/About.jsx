@@ -1,7 +1,7 @@
 import {React,useState,useEffect} from 'react';
 import styles from '../styles/about.module.css';
 import logo from '../assets/CodeSets-removebg-preview.png';
-import me from '../assets/pic-me.jpg';
+import me from '../assets/p-photo.jpg';
 import ScrollReveal from "scrollreveal";
 import { Link } from 'react-router-dom'
 
